@@ -5,6 +5,6 @@ def TransformarDEC(num):
         num = num // 2
     return binario
 
-print(TransformarDEC(19))
+print(TransformarDEC(int(input('Digite um número: '))))
 
 
