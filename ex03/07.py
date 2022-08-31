@@ -2,7 +2,7 @@ numero1 = float(input("Digite um numero: "))
 numero2 = float(input("Digite um numero: "))
 numero3 = float(input("Digite um numero: "))
 
-if(numero1 > numero2 and numero1 > numero3):
+if((numero1 > numero2) and (numero1 > numero3)):
     print("O maior numero é: ", numero1)
     if(numero2 > numero3): 
         print("O menor numero e: ", numero3)
