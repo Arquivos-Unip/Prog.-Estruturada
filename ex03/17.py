@@ -1,6 +1,3 @@
-from traceback import print_tb
-
-
 ano = int(input("Digite um ano: "))
 
 if (ano % 4 == 0):
