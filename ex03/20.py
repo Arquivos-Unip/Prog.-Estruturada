@@ -1,4 +1,4 @@
-total = int(input("Qual o vlaor a ser sacado? "))
+total = int(input("Qual o valor a ser sacado? "))
 
 def saque(total):
     nota100 = (total // 100)
