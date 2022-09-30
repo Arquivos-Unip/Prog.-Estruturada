@@ -2,6 +2,7 @@ def compras():
     i = 0
     db = []
     total = 0
+    carrinho = [] 
     print("Cadastre os produtos!")
     while (len(db) < 5):
         codigo = int(input("Qual o codigo do produto:\n"))
@@ -23,15 +24,17 @@ def compras():
         if(codigoProduto != -1):
             quantidade = int(input("Qual a quantidade:\n"))
             if(produtoAtual[3] < quantidade):
-                print('Quantidade indisponivel!\nTente Quantidades menores!')
+                print('Quantidade indisponivel!\nPor favor, escolha uma quantidade menor ou igual a', produtoAtual[3])
             else:
+                carrinho.append([produtoAtual[0], produtoAtual[1], produtoAtual[2], quantidade])                  
                 total += produtoAtual[2] * quantidade
                 produtoAtual[3] = produtoAtual[3] - quantidade
-                print("Produto comprado com sucesso")
+                print("Produto adicionado no carrinho!")
         else:
             i = -1
-            
+    print("Carrinho:", carrinho)     
     print("O total em reais da compra é:", total)
+    
 
         
 compras()
