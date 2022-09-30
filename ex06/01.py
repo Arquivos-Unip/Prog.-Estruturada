@@ -22,6 +22,7 @@ def compras():
         codigoProduto = float(input("Qual o codigo do produto que deseja comprar:\n"))
         produtoAtual = db[int(codigoProduto) - 1]
         if(codigoProduto != -1):
+            print("Produto selecionado:", 'Codigo:', produtoAtual[0], '| Nome:', produtoAtual[1], '| Preço:', produtoAtual[2], '| Estoque:', produtoAtual[3])
             quantidade = int(input("Qual a quantidade:\n"))
             if(produtoAtual[3] < quantidade):
                 print('Quantidade indisponivel!\nPor favor, escolha uma quantidade menor ou igual a', produtoAtual[3])
@@ -36,5 +37,6 @@ def compras():
     print("O total em reais da compra é:", total)
     
 
+        
         
 compras()
