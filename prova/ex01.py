@@ -11,13 +11,9 @@ vezes = 0
 i = 0
 while(i < 10):
     numero = int(input('Digite um numero:\n'))
-    if(numero >= 0): 
-        positivoNegativo = 'positivo'
+    if(numero < 0): 
+        print('Numero negativo')
     else:
-        positivoNegativo = 'negativo'
-
-
-    if(positivoNegativo == 'positivo'):
         if(numero < 50):
             print("Numero é menor que 50")
         elif(numero >= 50 and numero <= 100):
