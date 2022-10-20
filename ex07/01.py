@@ -1,7 +1,8 @@
 i = 0
+potenciaLista = [12, 15, 18, 20, 22]
 def calcularConsumo(largura, comprimento, potencia):
     area = largura * comprimento 
-    consumo = area * potencia
+    consumo = area * potenciaLista[potencia]
     return consumo
 
 while(i != -1):
@@ -13,18 +14,8 @@ while(i != -1):
         'comprimento': comprimento,
         'tipoQuarto': tipoQuarto
     }
-    if(inf.get('tipoQuarto') == 0 ): 
-        consumo = calcularConsumo(inf.get('largura'), inf.get('comprimento'), 12)
-    elif(inf.get('tipoQuarto') == 1 ): 
-        consumo = calcularConsumo(inf.get('largura'), inf.get('comprimento'), 15)
-    elif(inf.get('tipoQuarto') == 2 ): 
-        consumo = calcularConsumo(inf.get('largura'), inf.get('comprimento'), 18)
-    elif(inf.get('tipoQuarto') == 3 ): 
-        consumo = calcularConsumo(inf.get('largura'), inf.get('comprimento'), 20)
-    elif(inf.get('tipoQuarto') == 4 ): 
-        consumo = calcularConsumo(inf.get('largura'), inf.get('comprimento'), 22)
-    else:
-        print('Numero Invalido')
+    consumo = calcularConsumo(largura, comprimento, (tipoQuarto - 1))
+    
     quantidadeLamp = consumo / 60
     if(quantidadeLamp % 1 == 0):
         total = quantidadeLamp
