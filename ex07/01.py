@@ -14,7 +14,7 @@ while(i != -1):
         'comprimento': comprimento,
         'tipoQuarto': tipoQuarto
     }
-    consumo = calcularConsumo(largura, comprimento, (tipoQuarto - 1))
+    consumo = calcularConsumo(largura, comprimento, (tipoQuarto))
     
     quantidadeLamp = consumo / 60
     if(quantidadeLamp % 1 == 0):
